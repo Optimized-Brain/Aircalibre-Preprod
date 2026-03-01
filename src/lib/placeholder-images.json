@@ -1,0 +1,100 @@
+{
+  "placeholderImages": [
+    {
+      "id": "homepage-hero",
+      "description": "Abstract flowing particles representing clean air",
+      "imageUrl": "https://images.unsplash.com/photo-1523539090110-4deee7810c00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHBhcnRpY2xlc3xlbnwwfHx8fDE3NjA4MTg2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract particles"
+    },
+    {
+      "id": "solution-sensor",
+      "description": "A clean, elegant 3D render of the AirCal sensor",
+      "imageUrl": "https://images.unsplash.com/photo-1727953990403-8677ce0599e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9kdWN0JTIwcmVuZGVyfGVufDB8fHx8MTc2MDgxODYxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "product render"
+    },
+    {
+      "id": "feature-map",
+      "description": "A stylized graphic of a world map with glowing data points",
+      "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b3JsZCUyMG1hcHxlbnwwfHx8fDE3NjA3MzU1MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "world map"
+    },
+    {
+      "id": "logo-cisco",
+      "description": "Logo for Cisco",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg",
+      "imageHint": "Cisco logo"
+    },
+    {
+      "id": "logo-nasscom",
+      "description": "Logo for Nasscom Foundation",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Nasscom-logo-svg.svg",
+      "imageHint": "Nasscom Foundation logo"
+    },
+    {
+      "id": "logo-ieee",
+      "description": "Logo for IEEE",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/IEEE_logo.svg",
+      "imageHint": "IEEE logo"
+    },
+    {
+      "id": "about-hero",
+      "description": "An inspiring, high-quality photo of a beautiful, clear landscape",
+      "imageUrl": "https://images.unsplash.com/photo-1596882542114-e1e429474868?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjbGVhciUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NjA4MTg2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clear landscape"
+    },
+    {
+      "id": "about-mission",
+      "description": "A photo of the founders or the team in a workshop",
+      "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwd29ya3Nob3B8ZW58MHx8fHwxNzYwODE4NjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team workshop"
+    },
+    {
+      "id": "team-yash",
+      "description": "Profile photo of Yash Shah",
+      "imageUrl": "https://images.unsplash.com/photo-1715423058726-ddea1ec51b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYwNzMxMzIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-kathan",
+      "description": "Profile photo of Kathan Shah",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYwNzMxMzIyfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-bhuvan",
+      "description": "Profile photo of Bhuvan Bagwe",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYwNzMxMzIyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-shoaib",
+      "description": "Profile photo of Shoaib Attar, recipient of the IEEE YESIST'12 2024 award",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYwNzMxMzIyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-abhinav",
+      "description": "Profile photo of Abhinav Deotale",
+      "imageUrl": "https://images.unsplash.com/photo-1715423058726-ddea1ec51b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYwNzMxMzIyfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "tech-hero",
+      "description": "Abstract data visualization showing complex connections",
+      "imageUrl": "https://images.unsplash.com/photo-1538300342682-132b989b8b15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9ufGVufDB8fHx8MTc2MDgxODYxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract data"
+    },
+    {
+      "id": "tech-hardware-diagram",
+      "description": "A clean schematic or exploded view of a sensor",
+      "imageUrl": "https://images.unsplash.com/photo-1725564883404-582d17462d10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzZW5zb3IlMjBzY2hlbWF0aWN8ZW58MHx8fHwxNzYwODE4NjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sensor schematic"
+    },
+    {
+      "id": "award-certificate",
+      "description": "A certificate of achievement for an award",
+      "imageUrl": "https://images.unsplash.com/photo-1593113598332-cd288d649433?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdXJ0aWZpY2F0ZSUyMG9mJTIwYWNoaWV2ZW1lbnR8ZW58MHx8fHwxNzYwNzQyMjU4fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "award certificate"
+    }
+  ]
+}

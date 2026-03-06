@@ -105,7 +105,7 @@ export default function Home() {
                     Explore Tech <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="rounded-none border-white/20 hover:bg-white/10 text-white h-14 px-8 bg-transparent">
+                <Button asChild size="lg" variant="outline" className="rounded-none border-white/20 hover:bg-white/10 text-white hover:text-white h-14 px-8 bg-transparent transition-colors">
                   <Link href="/map" className="flex items-center gap-2 justify-center">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>

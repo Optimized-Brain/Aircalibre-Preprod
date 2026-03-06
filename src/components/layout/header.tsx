@@ -101,7 +101,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-4">
-            <Button asChild size="sm" className="hidden md:inline-flex rounded-none bg-foreground text-background hover:bg-zinc-800 px-6 uppercase tracking-widest text-xs font-bold">
+            <Button asChild size="sm" className="hidden md:inline-flex rounded-none bg-foreground text-background hover:bg-zinc-800 hover:text-white px-6 uppercase tracking-widest text-xs font-bold transition-colors">
               <Link href="/support">Connect</Link>
             </Button>
             <div className="flex items-center md:hidden">

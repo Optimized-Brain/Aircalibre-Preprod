@@ -88,13 +88,13 @@ export default function Home() {
             className="flex flex-col items-center w-full max-w-5xl"
           >
             <SpotlightText spotlightSize={150}>
-              <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] 2xl:text-[9rem] font-normal tracking-tighter leading-[0.9] text-white mt-12 mb-8 xl:whitespace-nowrap">
+              <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[7rem] font-normal tracking-tighter leading-[0.9] text-white mt-12 mb-8 text-balance break-words max-w-full">
                 CLARITY <span className="text-muted-foreground">IN EVERY</span> BREATH.
               </h1>
             </SpotlightText>
 
             <div className="mt-12 md:mt-16 flex flex-col items-center gap-8 border-t border-white/20 pt-8 w-full max-w-3xl">
-              <p className="text-lg md:text-xl font-light text-zinc-400">
+              <p className="text-base sm:text-lg md:text-xl font-light text-zinc-400 text-balance break-words max-w-full px-4">
                 AirCalibrate builds advanced PM2.5 sensors on an open-source platform.
                 Visualize the invisible particulates you breathe, live, with data architecture you can explicitly trust.
               </p>
@@ -126,11 +126,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5 relative">
               <div className="sticky top-40">
-                <h2 className="font-headline text-5xl font-normal tracking-tighter sm:text-6xl md:text-8xl mb-6 uppercase">
+                <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tighter mb-6 uppercase text-balance break-words max-w-full">
                   THE INVISIBLE <br /><span className="text-muted-foreground">THREAT</span>
                 </h2>
                 <div className="h-1 w-24 bg-foreground mb-8"></div>
-                <p className="text-xl font-light text-muted-foreground">
+                <p className="text-lg sm:text-xl font-light text-muted-foreground text-balance break-words max-w-full">
                   The air we breathe is a complex, undocumented chemical soup. Standard monitoring fails to capture the granular reality of our immediate atmosphere.
                 </p>
               </div>
@@ -154,8 +154,8 @@ export default function Home() {
                       {card.icon}
                     </div>
                     <div className="font-code text-xs text-zinc-500 mb-4 uppercase tracking-widest">// Problem 0{index + 1}</div>
-                    <h3 className="font-headline text-4xl sm:text-5xl font-medium tracking-tighter mb-6 uppercase text-white">{card.title}</h3>
-                    <p className="text-zinc-400 leading-relaxed font-light text-xl md:text-2xl">{card.description}</p>
+                    <h3 className="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tighter mb-6 uppercase text-white text-balance break-words max-w-full">{card.title}</h3>
+                    <p className="text-zinc-400 leading-relaxed font-light text-base sm:text-lg md:text-xl lg:text-2xl text-balance break-words max-w-full">{card.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -168,7 +168,7 @@ export default function Home() {
       <section id="solution" className="relative bg-background text-foreground border-b border-border">
         <div className="container px-4 md:px-6 py-24 md:py-40">
           <div className="flex flex-col mb-24">
-            <h2 className="font-headline text-5xl font-normal tracking-tighter sm:text-6xl md:text-8xl uppercase mb-8">
+            <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tighter uppercase mb-8 text-balance break-words max-w-full">
               RADICAL <br /> <span className="text-muted-foreground">PRECISION.</span>
             </h2>
           </div>
@@ -187,11 +187,11 @@ export default function Home() {
                   <div className="font-code text-xs text-zinc-500 uppercase tracking-widest border-b border-zinc-200 pb-4">
                     // Solution Paradigm 0{index + 1}
                   </div>
-                  <div className="flex items-center gap-6 text-foreground mb-4">
-                    {feature.icon}
-                    <h3 className="font-headline text-3xl sm:text-4xl uppercase tracking-tighter text-foreground">{feature.title}</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 text-foreground mb-4">
+                    <div className="shrink-0">{feature.icon}</div>
+                    <h3 className="font-headline text-2xl sm:text-3xl md:text-4xl uppercase tracking-tighter text-foreground text-balance break-words max-w-full">{feature.title}</h3>
                   </div>
-                  <p className="text-zinc-600 font-light leading-relaxed text-2xl">{feature.description}</p>
+                  <p className="text-zinc-600 font-light leading-relaxed text-lg sm:text-xl lg:text-2xl text-balance break-words max-w-full">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -228,10 +228,10 @@ export default function Home() {
       <section id="vision" className="py-32 md:py-48 bg-background border-y border-border overflow-hidden">
         <div className="container px-4 md:px-6 relative">
           <div className="mx-auto max-w-4xl text-center flex flex-col items-center">
-            <h2 className="font-headline text-5xl font-normal tracking-tighter sm:text-6xl md:text-8xl lg:text-9xl mb-8 uppercase text-foreground">
-              Open <span className="text-muted-foreground italic tracking-tight font-serif lowercase">by</span> <TypingText words={['Design', 'Code', 'Hardware', 'Data']} className="text-muted-foreground" />
+            <h2 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal tracking-tighter mb-8 uppercase text-foreground text-balance break-words max-w-full flex flex-col sm:flex-row items-center justify-center gap-3">
+              <span>Open</span> <span className="text-muted-foreground italic tracking-tight font-serif lowercase">by</span> <TypingText words={['Design', 'Code', 'Hardware', 'Data']} className="text-muted-foreground" />
             </h2>
-            <p className="max-w-2xl text-lg md:text-xl font-light text-muted-foreground mb-12">
+            <p className="max-w-2xl text-base sm:text-lg md:text-xl font-light text-muted-foreground mb-12 text-balance break-words px-4">
               Our mission supersedes proprietary hardware. We are architecting an open-source, globally verifiable air quality standard. Free schematics. Free data. Zero compromises.
             </p>
             <Button asChild size="lg" className="rounded-full bg-foreground text-background hover:bg-zinc-800 h-16 px-10 text-lg group">
@@ -247,7 +247,7 @@ export default function Home() {
       <section className="py-24 bg-zinc-100 dark:bg-zinc-900 border-t border-border">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between pb-12">
-            <h2 className="font-headline text-4xl md:text-6xl tracking-tighter font-normal max-w-lg mb-8 md:mb-0">
+            <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter font-normal max-w-lg mb-8 md:mb-0 text-balance break-words">
               Contribute to a clearer atmosphere.
             </h2>
             <Button asChild size="lg" variant="outline" className="rounded-none border-foreground text-foreground hover:bg-foreground hover:text-background h-14 px-8 bg-transparent transition-all duration-300">

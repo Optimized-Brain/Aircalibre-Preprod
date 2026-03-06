@@ -1,19 +1,36 @@
-interface LogoProps {
+import React from 'react';
+
+interface LogoProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
 
-export default function Logo({ className = '' }: LogoProps) {
+export default function Logo({ className = '', ...props }: LogoProps) {
   return (
-    <div className={`flex items-center gap-1.5 ${className}`}>
-      <div className="flex flex-col font-sans font-bold leading-[0.85] tracking-tight">
-        <span className="text-[1.3em]">Air</span>
-        <span className="text-[1.3em]">Calibre</span>
-      </div>
-      <div className="flex -translate-x-1 translate-y-[-0.2em] relative">
-        <div className="w-[1.0em] h-[1.0em] rounded-full bg-zinc-200/90 z-30" />
-        <div className="w-[1.2em] h-[1.2em] rounded-full bg-zinc-300/80 -ml-[0.5em] translate-y-[0.3em] z-20" />
-        <div className="w-[1.6em] h-[1.6em] rounded-full bg-zinc-400/80 -ml-[0.6em] -translate-y-[0.1em] z-10" />
-      </div>
-    </div>
+    <svg
+      viewBox="0 0 160 85"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`h-12 w-auto ${className}`}
+      {...props}
+    >
+      <g
+        fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+        fontWeight="800"
+        fontSize="38"
+        fill="currentColor"
+        letterSpacing="-0.03em"
+      >
+        <text x="0" y="34">Air</text>
+        <text x="0" y="74">Calibre</text>
+      </g>
+
+      <g>
+        {/* Largest circle (right/bottom) */}
+        <circle cx="120" cy="36" r="22" className="fill-zinc-400 dark:fill-zinc-500" />
+        {/* Medium circle (middle) */}
+        <circle cx="88" cy="30" r="16" className="fill-zinc-300 dark:fill-zinc-400" />
+        {/* Smallest circle (left/top) */}
+        <circle cx="68" cy="24" r="10" className="fill-zinc-200 dark:fill-zinc-300" />
+      </g>
+    </svg>
   );
 }

@@ -36,6 +36,7 @@ const specs = [
   { icon: <Power className="h-4 w-4" />, name: 'Power', value: '5V USB-C' },
   { icon: <Copyright className="h-4 w-4" />, name: 'License', value: 'Open Source Hardware (CERN-OHL)' },
 ];
+/* Ye specs ka content ka discuss karke update kar denge*/
 
 export default function TechnologyPage() {
   const hardwareImage = PlaceHolderImages.find(
@@ -76,7 +77,7 @@ export default function TechnologyPage() {
                 Single <br /> Sensor, <br /> <span className="text-zinc-500">Global <br /> Scope.</span>
               </h2>
               <p className="text-xl md:text-2xl font-light text-zinc-400 leading-relaxed">
-                A unified architecture. Engineered for volatile multi-environment particulate monitoring. From quiet interiors to severe urban intersections, our laser scattering module yields immediate data for PM1.0, PM2.5, and PM10 simultaneously.
+                Made for multi-environment Pollution Monitoring from quiet interiors to severe urban intersections, our sensors immediate measures Particulate Matter and calculate Air Quality around you.
               </p>
             </div>
             <div className="lg:col-span-7">
@@ -119,12 +120,12 @@ export default function TechnologyPage() {
                 Neural <br /> Compensation.
               </h2>
               <div className="font-code text-sm text-zinc-500 uppercase tracking-widest flex gap-4">
-                <span>Temp</span> // <span>Hum</span> // <span>Drift</span>
-              </div>
+              -</div>
             </div>
             <p className="text-xl md:text-2xl font-light text-zinc-400 leading-relaxed">
-              Atmospheric conditions are highly volatile. Standard sensors wildly drift based on temperature and humidity spikes.
-              We deploy an onboard, hardware-accelerated neural network that corrects environmental drift in real-time, enforcing rigid structural consistency across all climates.
+              Atmospheric conditions are very volatile. Sensor readings can drift from due to these conditions
+              so we have deployed an onboard hardware accelerated system, It compensates for the drift 
+              which helps us to consistently give right readings at all times across, all climatic conditions.
             </p>
           </div>
         </div>
@@ -162,7 +163,7 @@ export default function TechnologyPage() {
               Inspect the source code and hardware schematics.
             </h3>
             <p className="font-light text-muted-foreground mb-12 max-w-xl">
-              Every layer is transparent. Firmware, PCB layouts, and API documentation are publicly available for peer review and implementation.
+              Every layer is transparent. Firmware, PCB layouts, and API documentation are publicly available.
             </p>
             <Link
               href="https://github.com/Optimized-Brain/AirCal-Demo-Website"

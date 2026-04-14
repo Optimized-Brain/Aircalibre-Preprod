@@ -7,11 +7,11 @@ import { SpotlightText } from '@/components/spotlight-text';
 const values = [
   {
     title: 'RADICAL OPENNESS.',
-    description: 'Hardware, software, and data. Fully transparent. No compromises. No walled gardens. Built for global verifiability.',
+    description: ' Built for the world our Hardware, Software and Data are fully transparent. No compromises. No walled gardens.',
   },
   {
-    title: 'SCIENTIFIC PRECISION.',
-    description: 'We are data-driven. Our architecture relies on strict laser scattering and onboard neural networking to ensure absolute consistency.',
+    title: 'EXTREME PRECISION.',
+    description: 'Built for Extreme Precision, our stack is made to measure, mitigate and solve with high precision while being most efficient   ',
   },
   {
     title: 'COMMUNITY POWER.',
@@ -20,11 +20,7 @@ const values = [
 ];
 
 const team = [
-  { name: 'Yash Shah', role: 'Software & Operations', imageId: 'team-yash' },
-  { name: 'Kathan Shah', role: 'Research and Finance', imageId: 'team-kathan' },
-  { name: 'Bhuvan Bagwe', role: 'Finance & Hardware', imageId: 'team-bhuvan' },
-  { name: 'Shoaib Attar', role: "Software & Mechanical Design", imageId: 'team-shoaib' },
-  { name: 'Abhinav Deotale', role: 'Software & Mechanical Design', imageId: 'team-abhinav' },
+  { name: 'Valar ', role: 'Dohaeris' , imageId: 'team-faceless'},
 ];
 
 export default function AboutPage() {
@@ -44,8 +40,7 @@ export default function AboutPage() {
           </SpotlightText>
           <div className="flex flex-col md:flex-row justify-between items-end gap-12 border-t border-border pt-8 mt-16">
             <p className="max-w-xl text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
-              AirCalibrate was founded on a singular directive: expose the invisible.
-              We architect systems that make atmospheric data universally accessible, uncompromisingly accurate, and radically open.
+              AirCalibre works 
             </p>
             <div className="flex items-center gap-4 text-sm font-bold tracking-widest uppercase">
               Scroll to discover <ArrowDown className="animate-bounce" />
@@ -68,7 +63,7 @@ export default function AboutPage() {
                 To construct the most transparent, globally verifiable air quality monitoring infrastructure in existence.
               </p>
               <p className="text-xl md:text-2xl font-light text-zinc-400 leading-relaxed">
-                By open-sourcing our hardware schematics and algorithmically-compensated data streams, we empower individuals, communities, and researchers to confront atmospheric pollution with absolute certainty.
+                By Open sourcing our Hardware and Data streams, we empower individuals, communities and researchers to battle atmospheric pollution with absolute certainty.
               </p>
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-900 border border-zinc-800 grayscale hover:grayscale-0 transition-all duration-700">
                 <div className="absolute inset-0 bg-black/40 mix-blend-multiply z-10" />
@@ -166,7 +161,7 @@ export default function AboutPage() {
               The <br /> Architects
             </h2>
             <p className="text-zinc-400 font-light max-w-sm text-right">
-              The interdisciplinary team driving the structural, software, and hardware design of AirCalibrate.
+              This is the team driving AirCalibre.
             </p>
           </div>
           <div className="flex flex-col border-t border-border/20">

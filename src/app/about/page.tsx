@@ -11,7 +11,7 @@ const values = [
   },
   {
     title: 'EXTREME PRECISION.',
-    description: 'Built for Extreme Precision, our stack is made to measure, mitigate and solve with high precision while being most efficient   ',
+    description: 'Built for Extreme Precision, our stack measures, mitigatex and solves with high precision while being most efficient   ',
   },
   {
     title: 'COMMUNITY POWER.',
@@ -20,7 +20,7 @@ const values = [
 ];
 
 const team = [
-  { name: 'Valar ', role: 'Dohaeris' , imageId: 'team-faceless'},
+  { name: 'Valar Dohaeris' , imageId: 'team-faceless'},
 ];
 
 export default function AboutPage() {
@@ -128,7 +128,7 @@ export default function AboutPage() {
                 Validated <br /> <span className="text-muted-foreground italic font-serif lowercase">by</span> Experts
               </h2>
               <p className="text-xl md:text-2xl font-light text-muted-foreground leading-relaxed">
-                Our approach to radical openness and precision sensing has earned recognition from industry leaders in technology and engineering.
+                Our approach to radical openness and precision sensing has earned recognition from industry leaders.
               </p>
               <div className="space-y-8 pt-8 border-t border-border">
                 <div className="group flex flex-col md:flex-row md:items-center justify-between gap-4">

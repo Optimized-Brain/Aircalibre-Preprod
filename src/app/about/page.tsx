@@ -11,7 +11,7 @@ const values = [
   },
   {
     title: 'EXTREME PRECISION.',
-    description: 'Built for Extreme Precision, our stack measures, mitigatex and solves with high precision while being most efficient   ',
+    description: 'Built for Extreme Precision, our stack measures, mitigates and solves with high precision while being most efficient   ',
   },
   {
     title: 'COMMUNITY POWER.',
@@ -60,7 +60,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-12">
               <p className="text-2xl md:text-4xl font-light leading-snug">
-                To construct the most transparent, globally verifiable air quality monitoring infrastructure in existence.
+                To construct the most transparent, globally verifiable air quality monitoring infrastructure available.
               </p>
               <p className="text-xl md:text-2xl font-light text-zinc-400 leading-relaxed">
                 By Open sourcing our Hardware and Data streams, we empower individuals, communities and researchers to battle atmospheric pollution with absolute certainty.

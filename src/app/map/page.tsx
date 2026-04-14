@@ -22,7 +22,7 @@ export default function MapPage() {
 
         <p className="mx-auto mt-6 max-w-2xl text-xl md:text-2xl font-light text-zinc-400 leading-relaxed border-t border-zinc-800 pt-8">
           The global, real-time particulate visualization engine is currently compiling.
-          We are architecting a radially transparent interface for atmospheric data.
+          We are architecting a radically transparent interface for atmospheric data.
         </p>
 
         <Link

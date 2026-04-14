@@ -77,7 +77,7 @@ export default function TechnologyPage() {
                 Single <br /> Sensor, <br /> <span className="text-zinc-500">Global <br /> Scope.</span>
               </h2>
               <p className="text-xl md:text-2xl font-light text-zinc-400 leading-relaxed">
-                Made for multi-environment Pollution Monitoring from quiet interiors to severe urban intersections, our sensors immediate measures Particulate Matter and calculate Air Quality around you.
+                Made for multi-environment Pollution Monitoring from quiet interiors to severe urban congestion, our sensors accurately measure Particulate Matter and calculates Air Quality around you.
               </p>
             </div>
             <div className="lg:col-span-7">
@@ -125,7 +125,7 @@ export default function TechnologyPage() {
             <p className="text-xl md:text-2xl font-light text-zinc-400 leading-relaxed">
               Atmospheric conditions are very volatile. Sensor readings can drift from due to these conditions
               so we have deployed an onboard hardware accelerated system, It compensates for the drift 
-              which helps us to consistently give right readings at all times across, all climatic conditions.
+              helping us to consistently give accurate readings at all times across all climatic conditions.
             </p>
           </div>
         </div>

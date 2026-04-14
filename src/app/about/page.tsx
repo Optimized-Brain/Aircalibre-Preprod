@@ -20,7 +20,7 @@ const values = [
 ];
 
 const team = [
-  { name: 'Valar Dohaeris' , imageId: 'team-faceless'},
+  {  role: 'Valar Dohaeris' , imageId: 'team-faceless'},
 ];
 
 export default function AboutPage() {

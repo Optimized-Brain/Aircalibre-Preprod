@@ -17,9 +17,9 @@ import {
 } from '@/components/ui/sheet';
 
 const navLinks = [
-  { href: '/about', label: 'About Us' },
-  { href: '/technology', label: 'Tech' },
-  { href: '/map', label: 'Data Map' },
+  { href: '/about', label: 'Measure' },
+  { href: '/technology', label: 'Mitigate' },
+  { href: '/map', label: 'Solve' },
 ];
 
 export default function Header() {

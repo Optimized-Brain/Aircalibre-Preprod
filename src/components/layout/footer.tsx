@@ -3,9 +3,9 @@ import { ArrowUpRight } from 'lucide-react';
 import Logo from '@/components/logo';
 
 const footerLinks = [
-  { href: '/about', label: 'About' },
-  { href: '/technology', label: 'Tech' },
-  { href: '/map', label: 'Map' },
+  { href: '/about', label: 'Measure' },
+  { href: '/technology', label: 'Mitigate' },
+  { href: '/map', label: 'Solve' },
   { href: '/support', label: 'Support' },
   { href: '/privacy', label: 'Privacy' },
   { href: '/terms', label: 'Terms' },
@@ -21,13 +21,6 @@ export default function Footer() {
             <Link href="/" className="inline-block text-white">
               <Logo />
             </Link>
-            <div className="hidden md:flex items-center gap-2 border-l border-zinc-800 pl-6">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-zinc-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
-              </span>
-              <span className="font-code text-[10px] uppercase tracking-widest text-white">System Online</span>
-            </div>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">

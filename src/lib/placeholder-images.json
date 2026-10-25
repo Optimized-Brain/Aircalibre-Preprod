@@ -44,7 +44,7 @@
     },
     {
       "id": "about-mission",
-      "description": "A photo of the founders or the team in a workshop",
+      "description": "Illustrative workshop photo, not the GoodOne team",
       "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwd29ya3Nob3B8ZW58MHx8fHwxNzYwODE4NjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "team workshop"
     },
@@ -86,7 +86,7 @@
     },
     {
       "id": "tech-hardware-diagram",
-      "description": "A clean schematic or exploded view of a sensor",
+      "description": "Illustrative product image, not a GoodOne schematic or hardware photo",
       "imageUrl": "https://images.unsplash.com/photo-1725564883404-582d17462d10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzZW5zb3IlMjBzY2hlbWF0aWN8ZW58MHx8fHwxNzYwODE4NjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sensor schematic"
     },

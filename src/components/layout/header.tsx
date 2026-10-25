@@ -17,9 +17,9 @@ import {
 } from '@/components/ui/sheet';
 
 const navLinks = [
-  { href: '/about', label: 'Measure' },
-  { href: '/technology', label: 'Mitigate' },
-  { href: '/map', label: 'Solve' },
+  { href: '/measure', label: 'Measure' },
+  { href: '/mitigate', label: 'Mitigate' },
+  { href: '/solve', label: 'Solve' },
 ];
 
 export default function Header() {
@@ -129,7 +129,7 @@ export default function Header() {
                         )}
                         onClick={(e) => handleSidebarNavClick(e, '/')}
                       >
-                        Base
+                        Home
                       </Link>
                       {navLinks.map((link) => (
                         <Link
@@ -166,7 +166,7 @@ export default function Header() {
       {/* Page Transition Overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-[100] bg-zinc-950 pointer-events-none flex flex-col items-center justify-center",
+          "premium-surface fixed inset-0 z-[100] pointer-events-none flex flex-col items-center justify-center",
           navState === 'idle' ? "transition-none translate-y-full opacity-0" : "transition-transform duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] opacity-100",
           navState === 'entering' && "translate-y-0",
           navState === 'exiting' && "-translate-y-full"

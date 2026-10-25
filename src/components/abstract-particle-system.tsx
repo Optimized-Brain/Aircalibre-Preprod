@@ -1,94 +1,135 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 interface Particle {
-    id: number;
-    x: number;
-    y: number;
-    size: number;
-    speedX: number;
-    speedY: number;
-    opacity: number;
+  x: number;
+  y: number;
+  radius: number;
+  velocityX: number;
+  velocityY: number;
+  opacity: number;
 }
 
 export function AbstractParticleSystem() {
-    const [particles, setParticles] = useState<Particle[]>([]);
-    const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-    useEffect(() => {
-        if (!containerRef.current) return;
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d");
+    if (!canvas || !context) return;
 
-        const width = containerRef.current.clientWidth;
-        const height = containerRef.current.clientHeight;
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const pointer = { x: -1000, y: -1000 };
+    let particles: Particle[] = [];
+    let animationFrame = 0;
+    let width = 0;
+    let height = 0;
 
-        // Create initial dense cloud representing PM2.5
-        const initialParticles: Particle[] = Array.from({ length: 150 }).map((_, i) => ({
-            id: i,
-            x: Math.random() * width,
-            y: Math.random() * height,
-            size: Math.random() * 3 + 1, // small particulate matter
-            speedX: (Math.random() - 0.5) * 0.5,
-            speedY: (Math.random() - 0.5) * 0.5 - 0.2, // slow upward drift
-            opacity: Math.random() * 0.5 + 0.1,
-        }));
+    const resize = () => {
+      const bounds = canvas.getBoundingClientRect();
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+      width = bounds.width;
+      height = bounds.height;
+      canvas.width = Math.round(width * pixelRatio);
+      canvas.height = Math.round(height * pixelRatio);
+      context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
 
-        setParticles(initialParticles);
+      const count = Math.min(100, Math.max(36, Math.round((width * height) / 14000)));
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 1.5 + 0.5,
+        velocityX: (Math.random() - 0.5) * 0.18,
+        velocityY: (Math.random() - 0.5) * 0.18 - 0.04,
+        opacity: Math.random() * 0.38 + 0.12,
+      }));
+      draw();
+    };
 
-        let animationFrameId: number;
+    const draw = () => {
+      context.clearRect(0, 0, width, height);
 
-        const animate = () => {
-            setParticles((prevParticles) =>
-                prevParticles.map((p) => {
-                    let newX = p.x + p.speedX;
-                    let newY = p.y + p.speedY;
+      const glow = context.createRadialGradient(
+        pointer.x,
+        pointer.y,
+        0,
+        pointer.x,
+        pointer.y,
+        260,
+      );
+      glow.addColorStop(0, "rgba(255,255,255,0.07)");
+      glow.addColorStop(1, "rgba(255,255,255,0)");
+      context.fillStyle = glow;
+      context.fillRect(0, 0, width, height);
 
-                    // Wrap around edges to create continuous flow
-                    if (newY < -10) newY = height + 10;
-                    if (newX < -10) newX = width + 10;
-                    if (newX > width + 10) newX = -10;
+      for (let index = 0; index < particles.length; index++) {
+        const particle = particles[index];
+        if (!motionPreference.matches) {
+          particle.x += particle.velocityX;
+          particle.y += particle.velocityY;
 
-                    return { ...p, x: newX, y: newY };
-                })
-            );
-            animationFrameId = requestAnimationFrame(animate);
-        };
+          if (particle.x < 0) particle.x = width;
+          if (particle.x > width) particle.x = 0;
+          if (particle.y < 0) particle.y = height;
+          if (particle.y > height) particle.y = 0;
+        }
 
-        animate();
+        context.beginPath();
+        context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        context.fillStyle = `rgba(255,255,255,${particle.opacity})`;
+        context.fill();
 
-        return () => cancelAnimationFrame(animationFrameId);
-    }, []);
+        for (let otherIndex = index + 1; otherIndex < particles.length; otherIndex++) {
+          const other = particles[otherIndex];
+          const distance = Math.hypot(particle.x - other.x, particle.y - other.y);
+          if (distance < 105) {
+            context.beginPath();
+            context.moveTo(particle.x, particle.y);
+            context.lineTo(other.x, other.y);
+            context.strokeStyle = `rgba(255,255,255,${(1 - distance / 105) * 0.08})`;
+            context.stroke();
+          }
+        }
+      }
 
-    return (
-        <div
-            ref={containerRef}
-            className="absolute inset-0 overflow-hidden bg-black pointer-events-none"
-        >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)] mix-blend-screen" />
-            {particles.map((p) => (
-                <motion.div
-                    key={p.id}
-                    className="absolute rounded-full bg-white"
-                    style={{
-                        left: p.x,
-                        top: p.y,
-                        width: p.size,
-                        height: p.size,
-                        opacity: p.opacity,
-                        filter: `blur(${p.size > 2 ? '1px' : '0px'})`,
-                    }}
-                    animate={{
-                        opacity: [p.opacity * 0.5, p.opacity, p.opacity * 0.5],
-                    }}
-                    transition={{
-                        duration: Math.random() * 3 + 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
-                />
-            ))}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" />
-        </div>
-    );
+      if (!motionPreference.matches) {
+        animationFrame = window.requestAnimationFrame(draw);
+      }
+    };
+
+    const trackPointer = (event: PointerEvent) => {
+      const bounds = canvas.getBoundingClientRect();
+      pointer.x = event.clientX - bounds.left;
+      pointer.y = event.clientY - bounds.top;
+      if (pointer.x < 0 || pointer.x > width || pointer.y < 0 || pointer.y > height) {
+        pointer.x = -1000;
+        pointer.y = -1000;
+      }
+    };
+
+    const handleMotionPreference = () => {
+      window.cancelAnimationFrame(animationFrame);
+      draw();
+    };
+
+    const observer = new ResizeObserver(resize);
+    observer.observe(canvas);
+    window.addEventListener("pointermove", trackPointer);
+    motionPreference.addEventListener("change", handleMotionPreference);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("pointermove", trackPointer);
+      motionPreference.removeEventListener("change", handleMotionPreference);
+      window.cancelAnimationFrame(animationFrame);
+    };
+  }, []);
+
+  return (
+    <div className="premium-surface pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" />
+    </div>
+  );
 }

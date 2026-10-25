@@ -42,7 +42,7 @@ export function ExtrudedSensorComponent() {
     const text4Y = useTransform(scrollYProgress, [0.65, 0.75, 0.85, 0.95], [30, 0, 0, -30]);
 
     return (
-        <div ref={containerRef} className="relative h-[400vh] w-full bg-zinc-950 border-y border-zinc-800">
+        <div ref={containerRef} className="premium-surface relative h-[400vh] w-full border-y border-zinc-800">
             <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden [perspective:1400px]">
 
                 {/* Background Decor */}
@@ -52,26 +52,26 @@ export function ExtrudedSensorComponent() {
                 <div className="absolute left-6 md:left-24 lg:left-32 xl:left-48 top-0 h-full w-full max-w-sm z-50 pointer-events-none flex items-center">
                     {/* Casing Text */}
                     <motion.div style={{ opacity: text1Opacity, y: text1Y }} className="absolute inset-x-0">
-                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Outer Casing</h3>
-                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">Aerospace-grade aluminum alloy shield. Engineered to withstand severe environmental stress while allowing absolute maximum airflow to the internal testing chamber.</p>
+                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Portable by design</h3>
+                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">GoodOne is being developed as a compact monitor to carry between everyday environments. Enclosure design and airflow still need validation.</p>
                     </motion.div>
 
                     {/* Optic Text */}
                     <motion.div style={{ opacity: text2Opacity, y: text2Y }} className="absolute inset-x-0">
-                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Optical Chamber</h3>
-                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">High-precision laser scattering module. Instantly detects PM1.0, PM2.5, and PM10 particles down to 0.3 micrometers with 99.8% geometric accuracy.</p>
+                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Multi-sensor design</h3>
+                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">The current sensor direction combines PM2.5 and PM10 with CO2, VOC, temperature, and humidity. Final integration and performance are still being validated.</p>
                     </motion.div>
 
                     {/* PCB Text */}
                     <motion.div style={{ opacity: text3Opacity, y: text3Y }} className="absolute inset-x-0">
-                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Neural Net ASIC</h3>
-                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">The brain of the sensor. Hardware-accelerated neural networks compensate for real-time drift caused by extreme local humidity and temperature spikes.</p>
+                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Control board</h3>
+                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">GoodOne is being built around an ESP32-S3-based controller. Prototype boards have been manufactured; bring-up and sensor integration are in progress.</p>
                     </motion.div>
 
                     {/* Base Text */}
                     <motion.div style={{ opacity: text4Opacity, y: text4Y }} className="absolute inset-x-0">
-                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Power & I/O</h3>
-                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">Universal mounting plate equipped with USB-C power delivery and high-bandwidth telemetry pins for instant global data exfiltration.</p>
+                        <h3 className="font-headline text-4xl sm:text-5xl uppercase text-white mb-4 tracking-tighter">Power and interface</h3>
+                        <p className="font-light text-zinc-400 text-base md:text-lg leading-relaxed">The design includes a small display, physical buttons, phone connectivity, and a rechargeable battery. Runtime and the finished user experience have not yet been validated.</p>
                     </motion.div>
                 </div>
 
@@ -85,7 +85,6 @@ export function ExtrudedSensorComponent() {
                         style={{ z: topLayerZ, opacity: layer1Opacity }}
                         className="absolute inset-0 bg-zinc-900 border border-zinc-700 shadow-2xl flex flex-col items-center justify-center transition-opacity duration-300"
                     >
-                        <div className="absolute top-4 left-4 font-code text-[10px] text-zinc-500">EX-CASING</div>
                         <div className="w-32 h-32 rounded-full border border-zinc-700 flex items-center justify-center">
                             <div className="w-24 h-24 rounded-full border border-zinc-800 flex items-center justify-center">
                                 <div className="w-16 h-16 rounded-full border border-zinc-800" />
@@ -98,7 +97,7 @@ export function ExtrudedSensorComponent() {
                         style={{ z: opticLayerZ, opacity: layer2Opacity }}
                         className="absolute inset-4 bg-[#0a0a0a]/90 border border-zinc-800 backdrop-blur-md flex flex-col items-center justify-center transition-opacity duration-300"
                     >
-                        <div className="absolute top-2 right-2 font-code text-[10px] text-zinc-500">OPT-CHMBR</div>
+                        <div className="absolute top-2 right-2 font-code text-[10px] text-zinc-500">SENSOR MODULE</div>
                         <Layers className="w-16 h-16 text-zinc-500 relative z-10" strokeWidth={1} />
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[2px] bg-red-500/30 shadow-[0_0_15px_rgba(239,68,68,0.8)] rotate-45" />
                     </motion.div>
@@ -108,7 +107,7 @@ export function ExtrudedSensorComponent() {
                         style={{ z: pcbLayerZ, opacity: layer3Opacity }}
                         className="absolute inset-2 bg-[#050505] border border-[#222] flex flex-col items-center justify-center gap-4 transition-opacity duration-300"
                     >
-                        <div className="absolute bottom-2 left-2 font-code text-[10px] text-zinc-500">PCB-CNTRL</div>
+                        <div className="absolute bottom-2 left-2 font-code text-[10px] text-zinc-500">CONTROL PCB</div>
                         <Cpu className="w-20 h-20 text-white" strokeWidth={1} />
                         <div className="w-full px-8 flex justify-between">
                             <div className="w-4 h-4 bg-zinc-800" />
@@ -122,7 +121,7 @@ export function ExtrudedSensorComponent() {
                         style={{ z: baseLayerZ, opacity: layer4Opacity }}
                         className="absolute -inset-2 bg-zinc-950 border border-zinc-800 flex flex-col items-center justify-center transition-opacity duration-300"
                     >
-                        <div className="absolute bottom-4 right-4 font-code text-[10px] text-zinc-500">MNT-BASE</div>
+                        <div className="absolute bottom-4 right-4 font-code text-[10px] text-zinc-500">POWER / DISPLAY</div>
                         <RadioReceiver className="w-16 h-16 text-zinc-700 mb-4" strokeWidth={1} />
                         <div className="flex gap-2">
                             <div className="w-2 h-2 rounded-full bg-zinc-800" />

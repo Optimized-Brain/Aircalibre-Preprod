@@ -90,6 +90,17 @@ body {
   }
 }
 
+.premium-surface {
+  background-color: #08090b;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.025) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% -12%, rgb(255 255 255 / 0.12), transparent 55%),
+    radial-gradient(ellipse at 88% 72%, rgb(105 125 150 / 0.12), transparent 42%),
+    linear-gradient(135deg, #0b0c0f 0%, #050506 55%, #0c0d10 100%);
+  background-size: 64px 64px, 64px 64px, auto, auto, auto;
+}
+
 /* Particle background animation */
 .particle {
   position: absolute;

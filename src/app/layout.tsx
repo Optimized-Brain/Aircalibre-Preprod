@@ -7,9 +7,9 @@ import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'AirCal - Clarity in Every Breath',
+  title: 'AirCalibre | Open tools for clearer air',
   description:
-    'Real-Time Air Quality, Radically Open. Advanced PM2.5 sensors on an open-source platform.',
+    'AirCalibre is an open-source initiative building tools and sharing knowledge for environmental understanding. Explore projects, including GoodOne.',
 };
 
 export default function RootLayout({

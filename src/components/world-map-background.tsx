@@ -23,7 +23,7 @@ export function WorldMapBackground() {
     const markers = useMemo(() => generateRandomMarkers(30), []);
 
     return (
-        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden pointer-events-none mix-blend-screen bg-black">
+        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden pointer-events-none mix-blend-screen">
 
             {/* Slowly rotating map container */}
             <motion.div

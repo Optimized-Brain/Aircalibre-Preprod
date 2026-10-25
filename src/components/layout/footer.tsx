@@ -3,17 +3,15 @@ import { ArrowUpRight } from 'lucide-react';
 import Logo from '@/components/logo';
 
 const footerLinks = [
-  { href: '/about', label: 'Measure' },
-  { href: '/technology', label: 'Mitigate' },
-  { href: '/map', label: 'Solve' },
+  { href: '/measure', label: 'Measure' },
+  { href: '/mitigate', label: 'Mitigate' },
+  { href: '/solve', label: 'Solve' },
   { href: '/support', label: 'Support' },
-  { href: '/privacy', label: 'Privacy' },
-  { href: '/terms', label: 'Terms' },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 text-zinc-400 py-8 border-t border-zinc-900 selection:bg-white selection:text-black">
+    <footer className="premium-surface text-zinc-400 py-8 border-t border-zinc-900 selection:bg-white selection:text-black">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
 
@@ -36,8 +34,8 @@ export default function Footer() {
           </nav>
 
           <div className="flex items-center gap-6 font-code text-[10px] uppercase tracking-widest text-zinc-600">
-            <a href="https://github.com/Optimized-Brain/AirCal-Demo-Website" target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-white transition-colors">
-              GitHub <ArrowUpRight className="w-3 h-3" />
+            <a href="https://github.com/Optimized-Brain/Aircalibre-Preprod" target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-white transition-colors">
+              Website source <ArrowUpRight className="w-3 h-3" />
             </a>
             <p className="hidden lg:block">© {new Date().getFullYear()} AirCalibre.</p>
           </div>
